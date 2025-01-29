@@ -6,6 +6,9 @@ export const metadata = {
 
 
 const ProductLayout = ({ children }: { children: React.ReactNode }) => {
+  if (Math.floor(Math.random() * 2) === 1) {
+    throw new Error(`There isn't any product`);
+  }
   return (
     <div>
       <main>{children}</main>
